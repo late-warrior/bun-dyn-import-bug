@@ -2,16 +2,12 @@
 
 ## Repro
 
+* Steps -
+
 ```bash
 $> bun install
 $> bun build --splitting --outdir=static ./src/index.js
-$> cp index.html static/index.html
-```
-
-* Serve the built files using a static server - eg. python - 
-
-```bash
-$> cd static
+# Serve the built files using a static server - eg. python - 
 $> python -m http.server 8000
 ```
 

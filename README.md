@@ -6,7 +6,7 @@
 
 ```bash
 $> bun install
-$> bun build --splitting --outdir=static ./src/index.js
+$> bun run bun:build
 # Serve the built files using a static server - eg. python - 
 $> python -m http.server 8000
 ```
@@ -18,4 +18,12 @@ $> python -m http.server 8000
 var Components = import_react.lazy(() => import("trial/components.js"));
 // Expected
 var Components = import_react.lazy(() => import("./trial/components.js"));
+```
+
+* As a cross-check, verified that this works in `vite` -
+
+```bash
+$> bun run vite:build
+$> cd dist
+$> python -m http.server 8001
 ```
